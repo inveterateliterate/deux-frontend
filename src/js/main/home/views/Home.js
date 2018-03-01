@@ -3,6 +3,8 @@ import React from 'react'
 import jumping from '../../../../images/jumping.jpg'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
+import { WEEKS_ROUTE } from 'config'
 
 const propTypes = {}
 
@@ -15,9 +17,9 @@ function Home () {
       <h3> Round 2 of Coach Lauren's Training Program </h3>
       <img src={jumping} />
       <div>
-        <button className="button-primary home-button">
+        <Link to={ WEEKS_ROUTE } className="button-primary home-button">
           Go To Workouts
-        </button>
+        </Link>
       </div>
     </div>
   )

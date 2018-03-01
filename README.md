@@ -7,8 +7,6 @@ Frontend for the deux API
 + `node ^8.0.0`
 + `yarn ^1.0.0`
 
-
-
 ### Running in Development
 + `yarn start`
 

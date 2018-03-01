@@ -23,7 +23,12 @@ export const dayRunningExercise = PropTypes.shape({
 export const day = PropTypes.shape({
   id: PropTypes.number.isRequired,
   day_index: PropTypes.number.isRequired,
-  week_num: PropTypes.number.isRequired,
   day_running_exercises: PropTypes.arrayOf(dayRunningExercise),
   // resistance_exercises: PropTypes.arrayOf(dayResistanceExercise),
+})
+
+export const week = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  num: PropTypes.number.isRequired,
+  status: PropTypes.string.isRequired,
 })

@@ -1,5 +1,5 @@
 import Routes from './routes'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import '../../scss/application.scss'
 
-ReactDOM.render(Routes, document.getElementById('root'))
+render(Routes, document.getElementById('root'))

@@ -27,7 +27,7 @@ h5,
 h6 {
   @include font-type($primary-sans-serif, normal, $bold);
   @include rem(margin-bottom, 20px);
-  color: $grey-base;
+  color: $white-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-height: 1.1;

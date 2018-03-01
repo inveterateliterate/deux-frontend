@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 import Layout from './Layout'
 import { routes as HomeRoutes } from './home'
+import { routes as WeekRoutes } from './weeks'
 
 const store = initializeStore()
 
@@ -16,7 +17,8 @@ const Routes = (
   <Provider store={ store }>
     <Router history={ history } >
       <Route path="/" component={ Layout }>
-      { HomeRoutes }
+        { HomeRoutes }
+        { WeekRoutes }
       </Route>
     </Router>
   </Provider>
