@@ -23,4 +23,12 @@ Layout.propTypes = propTypes
 
 Layout.defaultProps = defaultProps
 
+// const mapDispatchToProps = {
+//   fetchWeeks: apiActions.fetchWeeks
+// }
+
+// export default compose(
+//   connect(null, mapDispatchToProps),
+//   onMount('fetchWeeks')
+// )
 export default Layout

@@ -31,4 +31,5 @@ export const week = PropTypes.shape({
   id: PropTypes.number.isRequired,
   num: PropTypes.number.isRequired,
   status: PropTypes.string.isRequired,
+  days: PropTypes.arrayOf(day),
 })

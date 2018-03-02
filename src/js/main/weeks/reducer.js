@@ -20,4 +20,9 @@ const selectors = {
   weeks: select('weeks.success', [])
 }
 
+selectors.currentWeek = function(state, id) {
+  const weeks = selectors.weeks(state)
+  return weeks.find(week => week.id === Number(id))
+}
+
 export { reducer, selectors, reducerKey }

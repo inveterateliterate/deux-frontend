@@ -2,7 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import { onMount } from 'lp-hoc'
 import { selectors } from '../reducer'
+import { WEEKS_ROUTE } from 'config'
+import { Link } from 'react-router'
 // import { WeekCard } from '../components'
 // import { SectionTitle } from 'components'
 import * as Types from 'types'
@@ -21,7 +24,9 @@ function Weeks({ weeks }) {
       { weeks.map((week, i) => {
           return (
             <div key={i}>
-              <p>Week { i + 1 }</p>
+              <Link to={ `${WEEKS_ROUTE }/${week.id}/days` } >
+                Week { i + 1 }
+              </Link>
             </div>
           )
         })
@@ -44,4 +49,5 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
+  onMount('fetchWeeks')
 )(Weeks)
