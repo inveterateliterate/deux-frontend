@@ -24,7 +24,7 @@ module.exports = {
     'babel-polyfill',
     paths.jsFolder,
   ],
-  output: {   
+  output: {
     path: paths.outputFolder,
     filename: 'static/js/[name].[chunkhash:8].js',
     publicPath: '/',
@@ -48,7 +48,7 @@ module.exports = {
         include: paths.sourceFolder,
         use: [
           {
-            loader: 'url-loader', 
+            loader: 'url-loader',
             options: {
               limit: 10000,
               name: 'static/media/[name].[hash:8].[ext]'
@@ -66,7 +66,7 @@ module.exports = {
           'eslint-loader',
         ],
       },
-      // `ExtractTextPlugin` first applies our loaders, then grabs the result CSS and puts it in a separate file. 
+      // `ExtractTextPlugin` first applies our loaders, then grabs the result CSS and puts it in a separate file.
       // This way we actually ship a single CSS file in production instead of JS code injecting <style> tags.
       {
         test: /\.scss$/,
@@ -87,6 +87,7 @@ module.exports = {
                 includePaths: [
                   bourbonIncludePaths,
                   neatIncludePaths,
+                  './node_modules/bulma'
                 ]
               }
             },
@@ -142,7 +143,7 @@ module.exports = {
     // Put CSS into a single file
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin({
-      filename: 'static/css/[name].[contenthash:8].css', 
+      filename: 'static/css/[name].[contenthash:8].css',
       allChunks: true,
     }),
     // Generate a manifest file which contains a mapping of all asset filenames

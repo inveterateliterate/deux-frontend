@@ -6,6 +6,8 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import Layout from './Layout'
 import { routes as HomeRoutes } from './home'
 import { routes as WeekRoutes } from './weeks'
+import { routes as DayRoutes } from './days'
+import { routes as RunningExerciseRoutes } from './runningExercises'
 
 const store = initializeStore()
 
@@ -19,6 +21,8 @@ const Routes = (
       <Route path="/" component={ Layout }>
         { HomeRoutes }
         { WeekRoutes }
+        { DayRoutes }
+        { RunningExerciseRoutes }
       </Route>
     </Router>
   </Provider>

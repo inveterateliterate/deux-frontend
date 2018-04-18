@@ -13,8 +13,10 @@ function DayCard ({
   day: { id, weekday },
 }) {
   return (
-    <div>
-      <Link to={ DAYS_ROUTE } > { weekday } </Link>
+    <div className="box day-block">
+      <Link to={ `${DAYS_ROUTE}/${id}` } className="has-text-centered">
+        { weekday }
+      </Link>
     </div>
   )
 }

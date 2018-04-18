@@ -67,7 +67,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.(sass|scss)$/,
         include: paths.sourceFolder,
         use: [
           'style-loader',
@@ -78,6 +78,7 @@ module.exports = {
               includePaths: [
                 bourbonIncludePaths,
                 neatIncludePaths,
+                './node_modules/bulma'
               ]
             }
           }

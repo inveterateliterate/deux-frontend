@@ -37,7 +37,7 @@ h6 {
     @include transition(all 0.3s ease-in-out);
 
     &:hover{
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
@@ -94,7 +94,7 @@ a {
   @include s-base;
   @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover, &:focus  {
     color: $black-dark;
@@ -114,7 +114,7 @@ span{
 }
 
 u{
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 hr{

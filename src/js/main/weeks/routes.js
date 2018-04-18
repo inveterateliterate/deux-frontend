@@ -7,7 +7,7 @@ import Layout from './Layout'
 const Routes = (
   <Route path={ WEEKS_ROUTE } component={ Layout }>
     <IndexRoute component={ Views.Weeks } />
-    <Route path=":id/days" component={ Views.WeekDays } />
+    <Route path=":id" component={ Views.WeekDays } />
   </Route>
 )
 

@@ -2,34 +2,34 @@ import React from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { selectors } from '../reducer'
-import { Days } from '../../days/views'
+import { RunningExercises } from '../../runningExercises/views'
 import { waitFor } from 'lp-hoc'
 import * as Types from 'types'
 
 const propTypes = {
-  week: Types.week.isRequired,
+  day: Types.day.isRequired
 }
 
 const defaultProps = {}
 
-function WeekDays({
-  week: { id, num },
+function DayExercises({
+  day: { id, weekday }
 }) {
   return (
     <div>
-      <h1>Week { num }</h1>
-      <Days weekId={ id } />
+      <h1>Exercises for { weekday }</h1>
+      <RunningExercises dayId={ id } />
     </div>
   )
 }
 
-WeekDays.propTypes = propTypes
+DayExercises.propTypes = propTypes
 
-WeekDays.defaultProps = defaultProps
+DayExercises.defaultProps = defaultProps
 
 function mapStateToProps (state, { params: { id }}) {
   return {
-    week: selectors.currentWeek(state, id)
+    day: selectors.currentDay(state, id)
   }
 }
 
@@ -37,5 +37,5 @@ const mapDispatchToProps = {}
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  waitFor('week')
-)(WeekDays)
+  waitFor('day')
+)(DayExercises)
