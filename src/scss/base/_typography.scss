@@ -27,7 +27,7 @@ h5,
 h6 {
   @include font-type($primary-sans-serif, normal, $bold);
   @include rem(margin-bottom, 20px);
-  color: $grey-base;
+  color: $white-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-height: 1.1;
@@ -37,7 +37,7 @@ h6 {
     @include transition(all 0.3s ease-in-out);
 
     &:hover{
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
@@ -56,12 +56,14 @@ h2{
 
 h3{
   text-align: center;
+  color: $grey-dark;
 }
 
 h4{
   border-top: 1px solid $white-med;
   @include rem(padding, 20px 0px 0px);
   font-weight: $regular;
+  color: $grey-dark;
 }
 
 .primary-color{
@@ -94,7 +96,7 @@ a {
   @include s-base;
   @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover, &:focus  {
     color: $black-dark;
@@ -114,7 +116,7 @@ span{
 }
 
 u{
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 hr{
