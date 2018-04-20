@@ -15,13 +15,16 @@ const propTypes = {
 const defaultProps = {}
 
 function RunningExercises({ runs }) {
-  console.log(runs)
   return (
     <div>
-      { runs.map((day, i) => {
+      { runs.map((run, i) => {
           return (
             <div key={i}>
-              <RunningExerciseCard run={ day.runnable } />
+              <RunningExerciseCard
+                run={ run.runnable[Object.keys(run.runnable)[1]] }
+                status={ run.completed }
+                type={ run.runnable.type }
+              />
             </div>
           )
         })

@@ -1,23 +1,49 @@
 import PropTypes from 'prop-types'
 
-export const runnable = PropTypes.shape({
+export const longRun = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  amtTime: PropTypes.number,
-  numTimes: PropTypes.number,
-  timePer: PropTypes.number,
-  distance: PropTypes.string,
-  restBetween: PropTypes.number,
-  repSecondsRest: PropTypes.number,
-  roundMinutesRest: PropTypes.number,
-  roundOrder: PropTypes.number,
+  amtTime: PropTypes.number.isRequired,
+})
+
+export const hundred = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  numTimes: PropTypes.number.isRequired,
+})
+
+export const mileRun = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
+  numTimes: PropTypes.number.isRequired,
+  timePer: PropTypes.number.isRequired,
+  restBetween: PropTypes.number.isRequired,
+})
+
+export const speedTraining = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  numTimes: PropTypes.number.isRequired,
+  distance: PropTypes.string.isRequired,
+  repSecondsRest: PropTypes.number.isRequired,
+  roundMinutesRest: PropTypes.number.isRequired,
+  roundOrder: PropTypes.number.isRequired,
+})
+
+export const suicide = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  numTimes: PropTypes.number.isRequired,
   intYds: PropTypes.number,
   intYime: PropTypes.number,
+  roundMinutesRest: PropTypes.number.isRequired,
+})
+
+export const runnable = PropTypes.shape({
+  // id: PropTypes.number.isRequired,
+  type: PropTypes.string,
 })
 
 export const dayRunningExercise = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  dayId: PropTypes.number.isRequired,
-  runnable: PropTypes.arrayOf(runnable)
+  day: PropTypes.objectOf(day),
+  // runnable: PropTypes.objectOf(runnable)
 })
 
 export const day = PropTypes.shape({

@@ -56,12 +56,14 @@ h2{
 
 h3{
   text-align: center;
+  color: $grey-dark;
 }
 
 h4{
   border-top: 1px solid $white-med;
   @include rem(padding, 20px 0px 0px);
   font-weight: $regular;
+  color: $grey-dark;
 }
 
 .primary-color{

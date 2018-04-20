@@ -1,18 +1,28 @@
 import React from 'react'
-// import * as Types from 'types'
+import PropTypes from 'prop-types'
+import * as Types from 'types'
+import { map, startCase } from 'lodash'
 
 const propTypes = {
-  // day: Types.day.isRequired,
+  // run: Types.runnable.isRequired,
+  status: PropTypes.bool.isRequired,
+  type: PropTypes.string.isRequired,
 }
 
 const defaultProps = {}
 
-function RunningExerciseCard ({
-  runs: { id, status },
-}) {
+function RunningExerciseCard({ run, status, type }) {
   return (
     <div className="box running-block">
-    <p> A Run </p>
+      <h3> { startCase(type) } </h3>
+      <h4> Status: { status ? 'Completed' : 'Incomplete' } </h4>
+      { map(run, (value, key) => {
+          if (key == 'id') return
+          return <div>
+            <p>{ startCase(key) }: { value }</p>
+          </div>
+        }
+      )}
     </div>
   )
 }

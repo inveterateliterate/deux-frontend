@@ -9,13 +9,13 @@ const slice = 'root.runningExercises'
 const initialState = {}
 
 const reducer = handleActions({
-  ...setFromRequest(REQ_RUNS, 'runs'),
+  ...setFromRequest(REQ_RUNS, 'runningExercises'),
 }, initialState)
 
 const select = selectorForSlice(slice)
 
 const selectors = {
-  runs: select('dayRunningExercises.success', [])
+  runs: select('runningExercises.success', [])
 }
 
 selectors.currentRunningExercise = function(state, id) {

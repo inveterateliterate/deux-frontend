@@ -2,7 +2,7 @@ import { requestWithKey } from 'lp-redux-api'
 
 export const REQ_WEEKS = 'REQ_WEEKS'
 export const REQ_DAYS = 'REQ_DAYS'
-export const REQ_RUNS = 'REQ_DAYS'
+export const REQ_RUNS = 'REQ_RUNS'
 
 export function fetchWeeks() {
   return requestWithKey(REQ_WEEKS, { url: '/weeks' })
